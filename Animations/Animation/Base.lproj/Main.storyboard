@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="7Wz-TQ-oUi">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--DropDown-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DropdDownVC" customModule="Animation" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ldE-jV-h6O">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XB3-He-YgQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="268"/>
+                                        <color key="backgroundColor" red="0.2784313725" green="0.80784313730000001" blue="0.37254901959999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="XB3-He-YgQ" firstAttribute="top" secondItem="ldE-jV-h6O" secondAttribute="top" id="A0v-YH-ttH"/>
+                                    <constraint firstItem="XB3-He-YgQ" firstAttribute="width" secondItem="ldE-jV-h6O" secondAttribute="width" id="Dya-Du-s0I"/>
+                                    <constraint firstItem="XB3-He-YgQ" firstAttribute="height" secondItem="ldE-jV-h6O" secondAttribute="height" multiplier="1:2" id="TaP-pb-PbF"/>
+                                    <constraint firstItem="XB3-He-YgQ" firstAttribute="centerX" secondItem="ldE-jV-h6O" secondAttribute="centerX" id="bOM-2w-YBp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.76891966540404044" green="0.0" blue="0.20223552590960475" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ldE-jV-h6O" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="7gU-Ue-qcS"/>
+                            <constraint firstItem="ldE-jV-h6O" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Em8-IZ-avw"/>
+                            <constraint firstItem="ldE-jV-h6O" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="G3l-fz-Sig"/>
+                            <constraint firstItem="ldE-jV-h6O" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" constant="-64" id="Z04-9X-1Vu"/>
+                            <constraint firstItem="ldE-jV-h6O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZX7-yf-fJd"/>
+                            <constraint firstItem="ldE-jV-h6O" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="o37-Zb-FCS"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="7gU-Ue-qcS"/>
+                                <exclude reference="G3l-fz-Sig"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="DropDown" id="3Zq-Xp-Zf5">
+                        <barButtonItem key="rightBarButtonItem" title="Drop" style="done" id="hq2-k4-avX">
+                            <connections>
+                                <action selector="dropDown:" destination="BYZ-38-t0r" id="5UH-QD-IqL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="dropDoanViewTopPadding" destination="A0v-YH-ttH" id="jwS-Eq-bnF"/>
+                        <outlet property="dropDownBackgroundView" destination="ldE-jV-h6O" id="ZpF-bE-avg"/>
+                        <outlet property="dropDownView" destination="XB3-He-YgQ" id="EPU-nF-2MG"/>
+                        <outlet property="dropDownViewHeightConst" destination="TaP-pb-PbF" id="5p8-Ui-odh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1117" y="429"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AxJ-0J-mdF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Wz-TQ-oUi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="etG-0U-2t7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DcH-80-FtZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gxg-I8-UJ7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="259" y="1089"/>
+        </scene>
+    </scenes>
+</document>
